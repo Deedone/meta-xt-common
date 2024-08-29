@@ -9,6 +9,8 @@ PACKAGECONFIG:append = " networkd"
 PACKAGECONFIG:append = " iptc"
 PACKAGECONFIG:append = " resolved"
 
+SRC_URI:remove:rcar-v4x = " file://add-non-owned-item-for-safe-transitioning.patch"
+
 USERADD_ERROR_DYNAMIC = "warn"
 
 do_install:append() {
